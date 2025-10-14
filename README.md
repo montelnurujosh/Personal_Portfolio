@@ -32,7 +32,7 @@ Personal
 
 
 ## Live Site
-[View Live Portfolio](https://your-live-site-url.com)
+[View Live Portfolio](https://joshua-nuruportfolio.netlify.app/)
 
 ## Author
 Joshua Nuru  
