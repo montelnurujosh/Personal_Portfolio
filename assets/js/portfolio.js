@@ -48,4 +48,49 @@
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
+
+  const contactForm = document.querySelector(".contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnContent = submitBtn ? submitBtn.innerHTML : "";
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending... <span aria-hidden="true">↗</span>';
+      }
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (response.ok) {
+          window.location.href = "thank-you.html";
+        } else {
+          const data = await response.json().catch(() => ({}));
+          const errorMsg =
+            data && data.errors && data.errors.map((err) => err.message).join(", ")
+              ? data.errors.map((err) => err.message).join(", ")
+              : (data && data.error) || "There was a problem sending your message. Please try again.";
+          alert(errorMsg);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnContent;
+          }
+        }
+      } catch (error) {
+        alert("There was a problem sending your message. Please check your connection and try again.");
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+        }
+      }
+    });
+  }
 })();
