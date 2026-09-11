@@ -49,6 +49,79 @@
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 
+  // Theme Management (Dark / Light Mode)
+  const THEME_STORAGE_KEY = "jn-theme";
+  const themeMetaTag = document.querySelector('meta[name="theme-color"]');
+  const themeToggles = document.querySelectorAll("[data-theme-toggle]");
+
+  const getPreferredTheme = () => {
+    try {
+      const stored = localStorage.getItem(THEME_STORAGE_KEY);
+      if (stored === "dark" || stored === "light") {
+        return stored;
+      }
+    } catch (e) {
+      // Storage unavailable
+    }
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  };
+
+  const applyTheme = (theme, persist = true) => {
+    const isDark = theme === "dark";
+    document.documentElement.setAttribute("data-theme", theme);
+
+    if (themeMetaTag) {
+      themeMetaTag.setAttribute("content", isDark ? "#131311" : "#f3f0e9");
+    }
+
+    themeToggles.forEach((toggle) => {
+      toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+      toggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+      const labelSpan = toggle.querySelector(".theme-toggle-text");
+      if (labelSpan) {
+        labelSpan.textContent = isDark ? "Light" : "Dark";
+      }
+    });
+
+    if (persist) {
+      try {
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+      } catch (e) {
+        // Storage unavailable
+      }
+    }
+  };
+
+  // Sync state with DOM on init
+  const initialTheme = document.documentElement.getAttribute("data-theme") || getPreferredTheme();
+  applyTheme(initialTheme, false);
+
+  themeToggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme, true);
+    });
+  });
+
+  // Listen for OS scheme change if user hasn't chosen manually
+  if (window.matchMedia) {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleMediaChange = (e) => {
+      try {
+        if (!localStorage.getItem(THEME_STORAGE_KEY)) {
+          applyTheme(e.matches ? "dark" : "light", false);
+        }
+      } catch (err) {}
+    };
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleMediaChange);
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(handleMediaChange);
+    }
+  }
+
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", async (e) => {

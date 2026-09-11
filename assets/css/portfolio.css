@@ -7,9 +7,22 @@
   --orange: #df6b3f;
   --blue: #1e4f63;
   --white: #fbfaf6;
+  --header-bg: rgba(243, 240, 233, 0.94);
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
   --mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+[data-theme="dark"] {
+  --paper: #131311;
+  --paper-deep: #1b1b18;
+  --ink: #ece7dc;
+  --muted: #9c9990;
+  --line: rgba(236, 231, 220, 0.13);
+  --orange: #e57648;
+  --blue: #3c7f99;
+  --white: #ffffff;
+  --header-bg: rgba(19, 19, 17, 0.94);
 }
 
 *,
@@ -30,6 +43,7 @@ body {
   font-size: 16px;
   line-height: 1.55;
   overflow-x: hidden;
+  transition: background-color 240ms ease, color 240ms ease;
 }
 
 body.menu-open {
@@ -90,6 +104,7 @@ button {
 .site-header.is-scrolled {
   padding: 14px 0;
   background: rgba(243, 240, 233, 0.94);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
 }
@@ -1694,5 +1709,193 @@ h2 {
 
   .detail-image {
     margin-top: 37px;
+  }
+}
+
+/* ==========================================================================
+   Theme Toggle Button & Dark Mode Component Overrides
+   ========================================================================== */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  color: var(--ink);
+  background: transparent;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.theme-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+
+.theme-toggle-icon svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.theme-toggle .sun-icon {
+  display: none;
+}
+
+.theme-toggle .moon-icon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+  display: none;
+}
+
+/* Dark Mode Specific Component Overrides */
+[data-theme="dark"] .button-dark {
+  background: #ece7dc;
+  color: #131311;
+}
+
+[data-theme="dark"] .button-dark:hover {
+  background: var(--orange);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .nav-cta {
+  background: #ece7dc;
+  color: #131311;
+}
+
+[data-theme="dark"] .nav-cta:hover {
+  background: var(--orange);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .statement {
+  background: #0a0a09;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+[data-theme="dark"] .statement .section-kicker,
+[data-theme="dark"] .contact .section-kicker {
+  color: #8c8980;
+}
+
+[data-theme="dark"] .large-copy {
+  color: #b5b2a8;
+}
+
+[data-theme="dark"] .thinking {
+  background: #132630;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .thinking .section-kicker,
+[data-theme="dark"] .thinking .section-aside {
+  color: #8da4ac;
+}
+
+[data-theme="dark"] .principle {
+  border-top-color: rgba(255, 255, 255, 0.18);
+}
+
+[data-theme="dark"] .principle p {
+  color: #a8bec6;
+}
+
+[data-theme="dark"] .contact {
+  background: #0a0a09;
+  border-top: 1px solid var(--line);
+}
+
+[data-theme="dark"] .contact-inner > p:not(.section-kicker) {
+  color: #b5b2a8;
+}
+
+[data-theme="dark"] .site-footer {
+  background: #090908;
+  border-top: 1px solid var(--line);
+}
+
+[data-theme="dark"] .site-footer .wordmark-mark {
+  color: #131311;
+  background: #ece7dc;
+}
+
+[data-theme="dark"] .site-footer p,
+[data-theme="dark"] .footer-links {
+  color: #8c8980;
+}
+
+[data-theme="dark"] .contact-page {
+  background: #131311;
+}
+
+[data-theme="dark"] .contact-page .site-header.is-scrolled {
+  background: var(--header-bg);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .contact-page .wordmark-mark {
+  color: #131311;
+  background: #ece7dc;
+}
+
+[data-theme="dark"] .contact-page .nav-cta {
+  color: #131311;
+  background: #ece7dc;
+}
+
+[data-theme="dark"] .contact-page .nav-cta:hover {
+  color: #ffffff;
+  background: var(--orange);
+}
+
+@media (max-width: 900px) {
+  .site-nav .theme-toggle {
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0 2px;
+    padding: 12px 14px;
+    font-size: 11px;
+    border-color: var(--line);
+  }
+
+  [data-theme="dark"] .site-nav {
+    background: #1b1b18;
+    color: #ece7dc;
+    border: 1px solid var(--line);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+  }
+
+  [data-theme="dark"] .site-nav > a {
+    border-bottom-color: var(--line);
   }
 }
