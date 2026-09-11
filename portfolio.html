@@ -1,213 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Joshua Nuru — Portfolio</title>
-  <meta name="description" content="Portfolio of Joshua Nuru, Software Engineer & Mathematician">
-  <meta name="keywords" content="Joshua Nuru, Portfolio, Software Engineer, Mathematics">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon2.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected software, data, and educational projects by Joshua Nuru.">
+  <title>Selected work — Joshua Nuru</title>
+  <link rel="icon" href="assets/img/favicon2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 
-<body class="portfolio-page">
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" data-header><div class="shell header-inner"><a class="wordmark" href="index.html"><span class="wordmark-mark">JN</span><span>Joshua Nuru</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button><nav class="site-nav" id="site-nav" aria-label="Main navigation" data-nav><a href="portfolio.html" aria-current="page">Selected work</a><a href="services.html">How I think</a><a href="about.html">About</a><a href="contact.html" class="nav-cta">Start a conversation <span aria-hidden="true">↗</span></a></nav></div></header>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">Joshua Nuru</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Portfolio</h1>
-              <p class="mb-0">Hey there 👋, I’m Joshua Nuru, a passionate Software Engineer who completed training at Power Learn Project (PLP) Academy in November 2025 and is currently learning Video Editing at MoonTech Life. I’m also pursuing a BSc in Mathematics & Computer Science at Multimedia University of Kenya. I use Math & Software Engineering to create solutions that make a difference.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <!-- Project 1 -->
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/LogicofMaths.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>The Logic of Maths Website</h4>
-                  <p>A responsive website built with HTML, CSS, and JavaScript, showcasing mathematical concepts and demonstrating that Math is more than numbers — it’s a language of logic and life. Features interactive elements, clean design, and educational content.</p>
-                  <a href="assets/img/LogicofMaths.jpeg" title="The Logic of Maths Website" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Project 1 -->
-
-            <!-- Project 2 -->
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/KnowMeApp.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Know Me App</h4>
-                  <p>A personal portfolio web app developed using React and modern CSS frameworks, reflecting my personality, skills, and style through interactive UI components, dynamic content, and responsive design.</p>
-                  <a href="assets/img/KnowMeApp.jpeg" title="Know Me App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Project 2 -->
-
-            <!-- Project 3 -->
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/CIMA.jpeg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Community Issue Management App (CIMA)</h4>
-                  <p>A full-stack web app for reporting community issues like potholes and waste. Features interactive map and admin dashboard.</p>
-                  <a href="assets/img/CIMA.jpeg" title="Community Issue Management App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://communityissuemap.vercel.app/" title="Live Demo" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Project 3 -->
-
-            <!-- Project 4 -->
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/Kikapu.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Mama Millicent Baskets Showcase</h4>
-                  <p>A modern web showcase for beautiful handwoven Kikapu baskets — crafted with care and tradition. Built with React, Tailwind CSS, and Framer Motion, featuring WhatsApp & SMS integration for easy customer contact.</p>
-                  <a href="assets/img/Kikapu.png" title="Mama Millicent Baskets Showcase" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://mamamillicentbaskets.netlify.app/" title="Live Demo" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Project 4 -->
-
-            <!-- Project 5 -->
-            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/Dreamers.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Dreamers High Computer Services Website</h4>
-                  <p>Responsive website for Dreamers High Computer Services, built with React 18, TypeScript, Tailwind CSS, and modern libraries.</p>
-                  <a href="assets/img/Dreamers.png" title="Dreamers High Computer Services Website" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://dreamershigh.vercel.app/" title="Live Demo" class="details-link" target="_blank"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Project 5 -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
+  <main id="main-content" class="inner-page">
+    <section class="inner-hero"><div class="shell reveal"><p class="section-kicker">Selected work / 00</p><h1>Built to be <em>useful.</em></h1><p>Each project starts with a question: what should become easier, clearer, or more possible for the person using it?</p></div></section>
+    <section class="page-content"><div class="shell case-list">
+      <article class="case-row reveal">
+        <a class="case-image" href="portfolio-details.html"><img src="assets/img/CIMA.jpeg" alt="Community Issue Management App interface"><span class="project-arrow" aria-hidden="true">↗</span></a>
+        <div class="case-copy"><p class="project-number">01 / Featured case</p><h2>Community Issue <em>Management App</em></h2><p>A civic-minded web experience for surfacing, organizing, and following local issues. A project about making community feedback easier to see and act on.</p><div class="tag-row"><span>Web app</span><span>Product thinking</span><span>Vercel</span></div><a class="text-link" href="portfolio-details.html">Read the case study <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="case-row reveal">
+        <a class="case-image" href="https://logic-of-maths.netlify.app/" target="_blank" rel="noreferrer"><img src="assets/img/LogicofMaths.jpeg" alt="The Logic of Maths website interface"><span class="project-arrow" aria-hidden="true">↗</span></a>
+        <div class="case-copy"><p class="project-number">02 / Education</p><h2>The Logic <em>of Maths</em></h2><p>An interactive educational website built around a simple belief: mathematics becomes less intimidating when the idea is explained clearly and connected to something real.</p><div class="tag-row"><span>JavaScript</span><span>Education</span><span>Interactive content</span></div><a class="text-link" href="https://logic-of-maths.netlify.app/" target="_blank" rel="noreferrer">Open live project <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="case-row reveal">
+        <a class="case-image" href="https://dreamershigh.vercel.app/" target="_blank" rel="noreferrer"><img src="assets/img/Dreamers.png" alt="Dreamers High computer services website"><span class="project-arrow" aria-hidden="true">↗</span></a>
+        <div class="case-copy"><p class="project-number">03 / Business site</p><h2>Dreamers <em>High</em></h2><p>A clear digital home for a computer services business, designed to explain the offer quickly and make the next step obvious.</p><div class="tag-row"><span>Responsive UI</span><span>Frontend</span></div><a class="text-link" href="https://dreamershigh.vercel.app/" target="_blank" rel="noreferrer">Open live project <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="case-row reveal">
+        <a class="case-image" href="https://mamamillicentbaskets.netlify.app/" target="_blank" rel="noreferrer"><img src="assets/img/Kikapu.png" alt="Mama Millicent Baskets product showcase"><span class="project-arrow" aria-hidden="true">↗</span></a>
+        <div class="case-copy"><p class="project-number">04 / Brand experience</p><h2>Mama Millicent <em>Baskets</em></h2><p>A warm product showcase that lets the craft lead the experience, with an emphasis on texture, trust, and straightforward browsing.</p><div class="tag-row"><span>Visual design</span><span>Frontend</span></div><a class="text-link" href="https://mamamillicentbaskets.netlify.app/" target="_blank" rel="noreferrer">Open live project <span aria-hidden="true">↗</span></a></div>
+      </article>
+    </div></section>
   </main>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Joshua Nuru</h3>
-      <p>A passionate Software Engineer & Mathematician driven by curiosity and logic.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://twitter.com/your-handle"><i class="bi bi-twitter"></i></a>
-        <a href="https://github.com/your-username"><i class="bi bi-github"></i></a>
-        <a href="https://linkedin.com/in/your-profile"><i class="bi bi-linkedin"></i></a>
-        <a href="https://instagram.com/your-handle"><i class="bi bi-instagram"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Joshua Nuru</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <footer class="site-footer"><div class="shell footer-inner"><a class="wordmark" href="index.html"><span class="wordmark-mark">JN</span><span>Joshua Nuru</span></a><p>Built with curiosity, logic, and a lot of iteration.</p><div class="footer-links"><a href="https://github.com/montelnurujosh" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/in/joshua-nuru" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:nurujoshua724@gmail.com">Email</a></div></div></footer>
+  <script src="assets/js/portfolio.js"></script>
 </body>
 
 </html>

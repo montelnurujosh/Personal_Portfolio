@@ -1,122 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Joshua Nuru — Personal Portfolio</title>
-  <meta name="description" content="Joshua Nuru's personal portfolio showcasing software engineering and mathematics projects.">
-  <meta name="keywords" content="Joshua Nuru, Portfolio, Software Engineer, Mathematician, Web Development, Projects">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon2.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e9">
+  <meta name="description" content="Joshua Nuru is a software engineer and Mathematics & Computer Science student building useful digital products with analytical thinking.">
+  <title>Joshua Nuru — Software engineer with an analytical mind</title>
+  <link rel="icon" href="assets/img/favicon2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 
-<body class="index-page">
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Joshua Nuru</h1>
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Joshua Nuru home">
+        <span class="wordmark-mark">JN</span>
+        <span>Joshua Nuru</span>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span>Menu</span>
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation" data-nav>
+        <a href="#work">Selected work</a>
+        <a href="#thinking">How I think</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Start a conversation <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
 
-  <main class="main">
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Software engineer / applied mathematics</p>
+          <h1>I build digital products with <em>clarity.</em></h1>
+          <p class="hero-intro">I’m Joshua Nuru, a Mathematics &amp; Computer Science student graduating in 2027. I turn complex ideas into useful, thoughtful web experiences — from the first model to the final interface.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="mailto:nurujoshua724@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta">
+            <span><i class="status-dot"></i> Available for opportunities</span>
+            <span>Nairobi, Kenya / UTC+3</span>
+          </div>
+        </div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/home.jpeg" alt="" data-aos="fade-in">
-
-      <div class="container" data-aos="zoom-out" data-aos-delay="100">
-        <h2>Joshua Nuru</h2>
-        <p>I'm a <span class="typed" data-typed-items="Software Engineer, Mathematician, Developer, Problem Solver"></span><span class="typed-cursor typed-cursor--blink"></span></p>
-      <div class="social-links">
-        <a href="https://twitter.com/nurujoshua496" target="_blank"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://instagram.com/_just_call.me_nuru_" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/montelnurujosh" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="https://linkedin.com/in/joshua-nuru" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <div class="hero-portrait reveal reveal-delay">
+          <div class="portrait-frame">
+            <img src="assets/img/home.jpeg" alt="Joshua Nuru looking upward in a black and white portrait">
+            <span class="portrait-label">01 / 04<br><small>curiosity<br>over noise</small></span>
+          </div>
+          <div class="portrait-note">The best solutions<br><em>make complexity feel simple.</em></div>
         </div>
       </div>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <div class="shell hero-bottom">
+        <span class="mono-label">Scroll to investigate</span>
+        <span class="scroll-mark" aria-hidden="true">↓</span>
+        <span class="hero-index mono-label">Portfolio / 2026</span>
+      </div>
+    </section>
 
-    </section><!-- /Hero Section -->
+    <section class="statement section-pad">
+      <div class="shell statement-grid reveal">
+        <p class="section-kicker">01 / The throughline</p>
+        <div>
+          <h2>Different disciplines.<br><em>One way of thinking.</em></h2>
+          <p class="large-copy">Software engineering gives me the tools to build. Mathematics gives me the discipline to ask better questions, see patterns, and make decisions that hold up.</p>
+          <a class="text-link" href="#about">A little more about me <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
 
+    <section class="work section-pad" id="work">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">02 / Selected work</p>
+            <h2>Things I’ve <em>made.</em></h2>
+          </div>
+          <p class="section-aside">A selection of interfaces, tools, and experiments built around real people and real problems.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-card-featured reveal">
+            <a class="project-image" href="https://communityissuemap.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open Community Issue Management App">
+              <img src="assets/img/CIMA.jpeg" alt="Community Issue Management App interface">
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-info">
+              <div>
+                <p class="project-number">01</p>
+                <h3>Community Issue<br><em>Management App</em></h3>
+              </div>
+              <div class="project-detail">
+                <p>A civic-minded web experience for surfacing, organizing, and following local issues.</p>
+                <div class="tag-row"><span>Product thinking</span><span>Web app</span><span>Vercel</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-delay">
+            <a class="project-image project-image-short" href="https://logic-of-maths.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open The Logic of Maths website">
+              <img src="assets/img/LogicofMaths.jpeg" alt="The Logic of Maths website interface">
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-info project-info-compact">
+              <div>
+                <p class="project-number">02</p>
+                <h3>The Logic<br><em>of Maths</em></h3>
+              </div>
+              <div class="project-detail">
+                <p>Making mathematical ideas easier to see, understand, and remember.</p>
+                <div class="tag-row"><span>Education</span><span>JavaScript</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <a class="project-image project-image-short" href="https://dreamershigh.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open Dreamers High website">
+              <img src="assets/img/Dreamers.png" alt="Dreamers High computer services website">
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-info project-info-compact">
+              <div>
+                <p class="project-number">03</p>
+                <h3>Dreamers<br><em>High</em></h3>
+              </div>
+              <div class="project-detail">
+                <p>A clear, approachable digital home for a computer services business.</p>
+                <div class="tag-row"><span>Business site</span><span>Responsive UI</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card-wide reveal">
+            <a class="project-image project-image-short" href="https://mamamillicentbaskets.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Mama Millicent Baskets showcase">
+              <img src="assets/img/Kikapu.png" alt="Mama Millicent Baskets product showcase">
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project-info project-info-compact">
+              <div>
+                <p class="project-number">04</p>
+                <h3>Mama Millicent<br><em>Baskets</em></h3>
+              </div>
+              <div class="project-detail">
+                <p>A warm product showcase that lets the craft lead the experience.</p>
+                <div class="tag-row"><span>Brand experience</span><span>Frontend</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="work-footer reveal">
+          <p>More experiments live on GitHub.</p>
+          <a class="button button-outline" href="https://github.com/montelnurujosh" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="thinking section-pad" id="thinking">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">03 / Working principles</p>
+            <h2>How I approach<br><em>a problem.</em></h2>
+          </div>
+          <p class="section-aside">Good work is not only about what gets shipped. It’s about the thinking that makes the result useful.</p>
+        </div>
+        <div class="principles-grid">
+          <article class="principle reveal">
+            <span class="principle-index">01</span>
+            <h3>Start with the question.</h3>
+            <p>Before choosing a tool or writing a component, I try to understand the person, constraint, and outcome behind the request.</p>
+          </article>
+          <article class="principle reveal reveal-delay">
+            <span class="principle-index">02</span>
+            <h3>Make the complex legible.</h3>
+            <p>Analytical thinking is useful when it helps someone make a decision, take an action, or understand something new.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-index">03</span>
+            <h3>Build, test, refine.</h3>
+            <p>I prefer a working first version and honest feedback over a perfect plan that never meets the people it is for.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="about">
+      <div class="shell about-grid">
+        <div class="about-image reveal">
+          <img src="assets/img/profile-img.png" alt="Black and white portrait of Joshua Nuru">
+          <span class="about-stamp">JN<br>2026</span>
+        </div>
+        <div class="about-copy reveal reveal-delay">
+          <p class="section-kicker">04 / A little context</p>
+          <h2>Curious by nature.<br><em>Precise by practice.</em></h2>
+          <p>I’m studying Mathematics &amp; Computer Science at Multimedia University of Kenya while building my practice in software development, data analysis, and digital product design.</p>
+          <p>My current toolkit includes JavaScript, React, Node.js, MongoDB, Python, SQL, Git, and the patience to keep working through the part that is not obvious yet.</p>
+          <div class="about-links">
+            <a class="button button-dark" href="resume.html">View résumé <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://linkedin.com/in/joshua-nuru" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="shell contact-inner reveal">
+        <p class="section-kicker">05 / Your turn</p>
+        <h2>Have a good problem<br><em>to work on?</em></h2>
+        <p>Whether you’re building a product, exploring an idea, or looking for a thoughtful engineer to join the team, I’d like to hear about it.</p>
+        <a class="contact-email" href="mailto:nurujoshua724@gmail.com">nurujoshua724@gmail.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Joshua Nuru</h3>
-      <p>Passionate Software Engineer & Mathematician blending logic and technology to build real-world solutions.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://twitter.com/nurujoshua496" target="_blank"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://instagram.com/_just_call.me_nuru_" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/montelnurujosh" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="https://linkedin.com/in/joshua-nuru" target="_blank"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Joshua Nuru</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          Designed by <a href="mailto:nurujoshua724@gmail.com" target="_blank">Joshua Nuru</a>
-        </div>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="wordmark" href="#top">
+        <span class="wordmark-mark">JN</span>
+        <span>Joshua Nuru</span>
+      </a>
+      <p>Built with curiosity, logic, and a lot of iteration.</p>
+      <div class="footer-links">
+        <a href="https://github.com/montelnurujosh" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/joshua-nuru" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:nurujoshua724@gmail.com">Email</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/portfolio.js"></script>
 </body>
 
 </html>
