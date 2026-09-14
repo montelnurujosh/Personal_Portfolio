@@ -25,7 +25,7 @@ Joshua Nuru's responsive, editorial-style portfolio for software engineering, ma
 
 ## Live site
 
-[View Live Portfolio](https://joshua-nuruportfolio.netlify.app/)
+[View Live Portfolio](https://nurujoshua.vercel.app/)
 
 ## Author
 
